@@ -20,6 +20,7 @@ async function signupFormHandler(event) {
     // If the response is okay, log the user in
     if (response.ok) {
       console.log('success');
+      
       document.location.replace('/dashboard');
     } else {
       alert(response.statusText);
