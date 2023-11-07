@@ -1,0 +1,17 @@
+<div>
+    <a href="/dashboard/create">Create a new post</a>
+    <h1>Dashboard</h1>
+    {{#if posts.length}}
+    {{#each posts}}
+    <div>
+        <h2>{{title}}</h2>
+        <p>{{body}}</p>
+        <a href="/dashboard/edit/{{id}}">Edit</a>
+        <button class="delete-post" data-id="{{id}}">Delete</button>
+
+        {{else}}
+        <p>There are no posts yet.</p>
+        {{/each}}
+        {{/if}}
+    </div>
+</div>
